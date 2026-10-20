@@ -3,7 +3,7 @@
 source venv/bin/activate
 
 # Use a fixed broker port; 8082 is Kafka REST, not the client port.
-confluent local kafka start
+confluent local kafka start --plaintext-ports 9092
 
 echo "Waiting for Kafka core services to report 'UP' status..."
 TIMEOUT=45
